@@ -22,7 +22,7 @@ public class CoreJavaStandAloneShoppingApp {
 				user = Register.Display();
 			}
 			else {
-			user = Home.Display(user);
+				user = Home.Display(user);
 			}
 		}
 

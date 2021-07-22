@@ -32,6 +32,9 @@ public class Home {
 					break;
 				case "2":
 					user = Login.Display();
+				case "3":
+					Buy buy = new Buy();
+					buy.Display();
 				case "5":
 					System.out.println("Bye!!!");
 					System.exit(0);
