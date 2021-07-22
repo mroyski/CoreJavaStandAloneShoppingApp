@@ -13,9 +13,10 @@ public class Replace {
 			System.out.println("REPLACE\n");
 			
 		for (int i = 0; i < user.items.size(); i++) {
-			System.out.println(i + ". " + user.items.get(i).Name + " " + user.items.get(i).Price);
+			System.out.println(i + ". " + user.items.get(i).Name + " $" + user.items.get(i).Price);
 		}
 		
-		reader.readLine();
+		int input = Integer.parseInt(reader.readLine());
+		user.items.remove(input);
 	}
 }
