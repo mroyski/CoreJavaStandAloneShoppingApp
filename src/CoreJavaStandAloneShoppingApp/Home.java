@@ -56,7 +56,7 @@ public class Home {
 		System.out.println("5.EXIT");
 	}
 	public static void printUserItems(User user) {
-		System.out.println("Item List: \n");
+		System.out.println("\nItem List:");
 		for (int i = 0; i < user.items.size(); i++) {
 			System.out.println(i + ". " + user.items.get(i).Name + " $" + user.items.get(i).Price);
 		}
