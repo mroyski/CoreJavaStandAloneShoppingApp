@@ -5,28 +5,28 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Home {
-	public static User Display(User user)
+	public static void Display(User user)
 			throws IOException
 	{
-		printOptions(user);
-		printUserItems(user);
+		printOptions(CurrentUser.user);
+		printUserItems(CurrentUser.user);
 		
 		BufferedReader reader = new BufferedReader(
 				new InputStreamReader(System.in));
 		String input = reader.readLine();
 		
-		if (user.getEmail() == null)
+		if (CurrentUser.user.getEmail() == null)
 		{
-			user = Register.Display();
+			Register.Display();
 		}
 		
 		else {
 			switch(input) {
 				case "1":
-					user = Register.Display();
+					Register.Display();
 					break;
 				case "2":
-					user = Login.Display();
+					Login.Display();
 					break;
 				case "3":
 					Buy.Display(user);
@@ -43,7 +43,6 @@ public class Home {
 					break;
 			}
 		}
-		return user;
 	}
 	
 	public static void printOptions(User user) {

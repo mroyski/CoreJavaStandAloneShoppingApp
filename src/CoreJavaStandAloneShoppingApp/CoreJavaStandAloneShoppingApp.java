@@ -8,16 +8,15 @@ public class CoreJavaStandAloneShoppingApp {
 			throws IOException
 {		
 		boolean running = true;
-		User user = new User();
 		
 		while(running) {
 
-			if (user.getEmail() == null) {
-				if (Users.AllUsers.size() > 0) user = Login.Display();
-				else user = Register.Display();
+			if (CurrentUser.user.getEmail() == null) {
+				if (Users.AllUsers.size() > 0) Login.Display();
+				else Register.Display();
 			}
 			else {
-				user = Home.Display(user);
+				Home.Display(CurrentUser.user);
 			}
 		}
 

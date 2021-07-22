@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class Register 
 {
-	public static User Display() 
+	public static void Display() 
 			throws IOException
 	{
 		BufferedReader reader = new BufferedReader(
@@ -22,6 +22,6 @@ public class Register
 		User newUser = new User(email, password);
 		Users.addUser(newUser);
 		
-		return newUser;
+		CurrentUser.user = newUser;
 	}
 }

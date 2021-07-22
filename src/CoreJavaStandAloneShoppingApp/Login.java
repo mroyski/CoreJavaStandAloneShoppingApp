@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Login {
-	public static User Display() 
+	public static void Display() 
 			throws IOException
 	{
 		System.out.println("LOGIN\n");
@@ -27,10 +27,9 @@ public class Login {
 		if (loginUser == null) {
 			System.out.println("User does not exist!");
 			reader.readLine();
-			return new User();
 		}
-		
-		return loginUser;
-
+		else {
+			CurrentUser.user = loginUser;
+		}
 	}
 }
