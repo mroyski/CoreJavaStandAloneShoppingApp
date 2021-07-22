@@ -15,9 +15,7 @@ public class CoreJavaStandAloneShoppingApp {
 				if (Users.AllUsers.size() > 0) Login.Display();
 				else Register.Display();
 			}
-			else {
-				Home.Display(CurrentUser.user);
-			}
+			else Home.Display(CurrentUser.user);
 		}
 
 	}
