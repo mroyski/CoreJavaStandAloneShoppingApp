@@ -1,7 +1,6 @@
 package CoreJavaStandAloneShoppingApp;
 
 import java.io.IOException;
-import java.util.*;
 
 public class CoreJavaStandAloneShoppingApp {
 
@@ -22,14 +21,5 @@ public class CoreJavaStandAloneShoppingApp {
 			}
 		}
 
-}
-	
-	public static class Users {
-		public static ArrayList<User> AllUsers = new ArrayList<User>();
-		
-		public static void addUser(User user) {
-			AllUsers.add(user);
-		}
 	}
-	
 }
