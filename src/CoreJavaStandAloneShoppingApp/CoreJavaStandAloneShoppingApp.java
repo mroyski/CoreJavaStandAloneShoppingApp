@@ -6,68 +6,27 @@ import java.io.InputStreamReader;
 import java.io.*;
 import java.util.*;
 
+import CoreJavaStandAloneShoppingApp.CoreJavaStandAloneShoppingApp.Users;
+
 public class CoreJavaStandAloneShoppingApp {
 
 	public static void main(String[] args)
 			throws IOException
-{
-		Home(new User());
+{		
+		boolean running = true;
+		User user = new User();
 		
+		while(running) {
 
-
-}
-	
-/*	public static void Register() 
-			throws IOException
-	{
-		BufferedReader reader = new BufferedReader(
-				new InputStreamReader(System.in));
-		System.out.println("REGISTER\n");
-		
-		System.out.println("Enter a valid email address:");
-		String email = reader.readLine();
-		
-		System.out.println("Enter your password");
-		String password = reader.readLine();
-		
-		User newUser = new User(email, password);
-		Users.AllUsers.add(newUser);
-		
-		Home(newUser);
-	}
-	*/
-	public static void Home(User user)
-			throws IOException
-	{
-		System.out.println("Standalone Ecommerce App\n");
-		System.out.println("Logged in as: " + user.getEmail() + "\n");
-		System.out.println("1.REGISTER");
-		System.out.println("2.LOGIN");
-		System.out.println("3.BUY AN ITEM");
-		System.out.println("4.REPLACE AN ITEM");
-		System.out.println("5.EXIT");
-		
-		BufferedReader reader = new BufferedReader(
-				new InputStreamReader(System.in));
-		String input = reader.readLine();
-		
-		if (user.getEmail() == null)
-		{
-			User newUser = Register.Display();
-			Home(newUser);
-		}
-		
-		else {
-			switch(input) {
-				case "1":
-					User newUser = Register.Display();
-					Home(newUser);
-					break;
-				default:
-					System.out.println("");
+			if (user.getEmail() == null) {
+				user = Register.Display();
+			}
+			else {
+			user = Home.Display(user);
 			}
 		}
-	}
+
+}
 	
 	public static class Users {
 		public static ArrayList<User> AllUsers = new ArrayList<User>();

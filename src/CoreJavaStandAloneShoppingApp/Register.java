@@ -22,7 +22,7 @@ public class Register
 		String password = reader.readLine();
 	
 		User newUser = new User(email, password);
-		Users.AllUsers.add(newUser);
+		Users.addUser(newUser);
 		
 		return newUser;
 	}
