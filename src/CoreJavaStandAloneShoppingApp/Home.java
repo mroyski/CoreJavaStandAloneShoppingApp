@@ -32,14 +32,18 @@ public class Home {
 					break;
 				case "2":
 					user = Login.Display();
+					break;
 				case "3":
 					Buy buy = new Buy();
-					buy.Display();
+					buy.Display(user);
+					break;
 				case "5":
 					System.out.println("Bye!!!");
 					System.exit(0);
 				default:
-					System.out.println("ex");
+					System.out.println("Invalid Command");
+					reader.readLine();
+					break;
 			}
 		}
 		return user;

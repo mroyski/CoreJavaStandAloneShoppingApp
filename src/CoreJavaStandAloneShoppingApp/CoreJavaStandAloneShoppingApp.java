@@ -1,12 +1,7 @@
 package CoreJavaStandAloneShoppingApp;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.*;
 import java.util.*;
-
-import CoreJavaStandAloneShoppingApp.CoreJavaStandAloneShoppingApp.Users;
 
 public class CoreJavaStandAloneShoppingApp {
 

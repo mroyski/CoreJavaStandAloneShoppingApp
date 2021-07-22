@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class User {
 	private String email;
 	private String password;
-	public ArrayList<String> items;
+	public ArrayList<Item> items;
 	
 	public User() {
 	
@@ -14,7 +14,7 @@ public class User {
 	public User(String email, String password) {
 		this.email = email;
 		this.password = password;
-		this.items = new ArrayList<String>();
+		this.items = new ArrayList<Item>();
 	}
 	
 	public String getEmail() {
