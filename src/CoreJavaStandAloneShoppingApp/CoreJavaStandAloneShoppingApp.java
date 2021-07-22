@@ -15,9 +15,9 @@ public class CoreJavaStandAloneShoppingApp {
 		
 
 
-	}
+}
 	
-	public static void Register() 
+/*	public static void Register() 
 			throws IOException
 	{
 		BufferedReader reader = new BufferedReader(
@@ -35,11 +35,12 @@ public class CoreJavaStandAloneShoppingApp {
 		
 		Home(newUser);
 	}
-	
+	*/
 	public static void Home(User user)
 			throws IOException
 	{
 		System.out.println("Standalone Ecommerce App\n");
+		System.out.println("Logged in as: " + user.getEmail() + "\n");
 		System.out.println("1.REGISTER");
 		System.out.println("2.LOGIN");
 		System.out.println("3.BUY AN ITEM");
@@ -52,13 +53,15 @@ public class CoreJavaStandAloneShoppingApp {
 		
 		if (user.getEmail() == null)
 		{
-			Register();
+			User newUser = Register.Display();
+			Home(newUser);
 		}
 		
 		else {
 			switch(input) {
 				case "1":
-					Register();
+					User newUser = Register.Display();
+					Home(newUser);
 					break;
 				default:
 					System.out.println("");
