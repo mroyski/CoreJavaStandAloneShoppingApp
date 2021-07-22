@@ -14,7 +14,8 @@ public class CoreJavaStandAloneShoppingApp {
 		while(running) {
 
 			if (user.getEmail() == null) {
-				user = Register.Display();
+				if (Users.AllUsers.size() > 0) user = Login.Display();
+				else user = Register.Display();
 			}
 			else {
 				user = Home.Display(user);
