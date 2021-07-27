@@ -25,7 +25,7 @@ public class Login {
 				.orElse(null);
 				
 		if (loginUser == null) {
-			System.out.println("User does not exist!");
+			System.out.println("Invalid credentials!");
 			reader.readLine();
 		}
 		else {

@@ -11,12 +11,12 @@ public class Replace {
 		BufferedReader reader = new BufferedReader(
 				new InputStreamReader(System.in));
 			System.out.println("REPLACE\n");
-			
-		for (int i = 0; i < user.items.size(); i++) {
-			System.out.println(i + ". " + user.items.get(i).Name + " $" + user.items.get(i).Price);
+		if (user.items.size() > 0) {
+			for (int i = 0; i < user.items.size(); i++) {
+				System.out.println(i + ". " + user.items.get(i).Name + " $" + user.items.get(i).Price);
+			}
+			int input = Integer.parseInt(reader.readLine());
+			user.items.remove(input);
 		}
-		
-		int input = Integer.parseInt(reader.readLine());
-		user.items.remove(input);
 	}
 }

@@ -8,19 +8,19 @@ public class Home {
 	public static void Display(User user)
 			throws IOException
 	{
-		printOptions(CurrentUser.user);
-		printUserItems(CurrentUser.user);
-		
-		BufferedReader reader = new BufferedReader(
-				new InputStreamReader(System.in));
-		String input = reader.readLine();
-		
-		if (CurrentUser.user.getEmail() == null)
+		if (user.getEmail() == null)
 		{
 			Register.Display();
 		}
 		
 		else {
+			printOptions(user);
+			printUserItems(user);
+			
+			BufferedReader reader = new BufferedReader(
+					new InputStreamReader(System.in));
+			String input = reader.readLine();
+			
 			switch(input) {
 				case "1":
 					Register.Display();
